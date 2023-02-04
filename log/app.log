@@ -1,0 +1,68 @@
+2023-02-04 17:04:58,001 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.pattern.LoggerConverter@44040454 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:352)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at jarvice.quiz.MedicineQuizBot.MedicineQuizBotApplication.main(MedicineQuizBotApplication.java:9)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.pattern.LoggerConverter@44040454 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:253)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:312)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:188)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:332)
+	... 19 common frames omitted
+2023-02-04 17:05:10,575 INFO j.q.M.MedicineQuizBotApplication [main] Starting MedicineQuizBotApplication using Java 19.0.2 with PID 8559 (/home/dondigidon/Java/learnProject/MedicineQuizBot/target/classes started by dondigidon in /home/dondigidon/Java/learnProject/MedicineQuizBot)
+2023-02-04 17:05:10,578 INFO j.q.M.MedicineQuizBotApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-04 17:05:11,539 INFO j.q.M.MedicineQuizBotApplication [main] Started MedicineQuizBotApplication in 1.228 seconds (process running for 1.915)
+2023-02-04 17:09:35,758 INFO j.q.M.s.TelegramBot [MedicineQuiz Telegram Executor] Replied to user Ro Kenshi
+2023-02-04 17:17:06,790 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [jarvice.quiz.MedicineQuizBot.MedicineQuizBotApplicationTests]: MedicineQuizBotApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-04 17:17:06,872 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration jarvice.quiz.MedicineQuizBot.MedicineQuizBotApplication for test class jarvice.quiz.MedicineQuizBot.MedicineQuizBotApplicationTests
+2023-02-04 17:17:07,196 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/dondigidon/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/home/dondigidon/.m2/repository/org/json/json/20220320/json-20220320.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-02-04 17:17:07,208 INFO j.q.M.MedicineQuizBotApplicationTests [main] Starting MedicineQuizBotApplicationTests using Java 19.0.2 with PID 9576 (started by dondigidon in /home/dondigidon/Java/learnProject/MedicineQuizBot)
+2023-02-04 17:17:07,209 INFO j.q.M.MedicineQuizBotApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-04 17:19:12,929 INFO j.q.M.MedicineQuizBotApplicationTests [main] Started MedicineQuizBotApplicationTests in 124.433 seconds (process running for 128.12)
+2023-02-04 17:26:06,745 INFO o.a.h.i.e.RetryExec [MedicineQuiz Telegram Connection] I/O exception (java.net.SocketException) caught when processing request to {s}->https://api.telegram.org:443: Broken pipe
+2023-02-04 17:26:11,271 INFO o.a.h.i.e.RetryExec [MedicineQuiz Telegram Connection] Retrying request to {s}->https://api.telegram.org:443
+2023-02-04 17:34:02,648 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [jarvice.quiz.MedicineQuizBot.MedicineQuizBotApplicationTests]: MedicineQuizBotApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-04 17:34:22,026 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration jarvice.quiz.MedicineQuizBot.MedicineQuizBotApplication for test class jarvice.quiz.MedicineQuizBot.MedicineQuizBotApplicationTests
+2023-02-04 23:35:38,891 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [jarvice.quiz.MedicineQuizBot.MedicineQuizBotApplicationTests]: MedicineQuizBotApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-04 23:35:39,079 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration jarvice.quiz.MedicineQuizBot.MedicineQuizBotApplication for test class jarvice.quiz.MedicineQuizBot.MedicineQuizBotApplicationTests
+2023-02-04 23:35:39,615 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/dondigidon/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/home/dondigidon/.m2/repository/org/json/json/20220320/json-20220320.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-02-04 23:35:39,628 INFO j.q.M.MedicineQuizBotApplicationTests [main] Starting MedicineQuizBotApplicationTests using Java 19.0.2 with PID 10965 (started by dondigidon in /home/dondigidon/Java/learnProject/MedicineQuizBot)
+2023-02-04 23:35:39,628 INFO j.q.M.MedicineQuizBotApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-04 23:35:41,320 INFO j.q.M.MedicineQuizBotApplicationTests [main] Started MedicineQuizBotApplicationTests in 2.042 seconds (process running for 3.468)
